@@ -1,0 +1,59 @@
+@import '../../colors.scss';
+.notes__item {
+    display: flex;
+    flex-direction: column;
+    height: 122px;
+    margin-bottom: 10px;
+    padding: 15px 9px 7px 9px;
+    border: 1px solid $borderColor;
+    font-size: 12px;
+    color: $noteItemColor;
+    background-color:$clearColor;
+    box-sizing: border-box;
+}
+
+.note__title {
+    margin: 0 0 15px 6px;
+    font-size: 18px;
+    color: $borderColor;
+}
+
+.note__content {
+    margin: 0;
+    height: 100%;
+    text-align: left;
+}
+
+.notes__bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.note__date {
+    margin: 0;
+}
+
+.icon__edit {
+    stroke: $iconEditColor;
+    color: $iconEditColor;
+}
+
+.icon__trash {
+    stroke: $iconTrashColor;
+    color: $iconTrashColor;
+}
+.form-add-section{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    height: 100px;
+    width: 320px;
+    border: 1px solid $borderColor;
+    padding: 40px;
+   
+    background-color: $clearColor;
+   
+}

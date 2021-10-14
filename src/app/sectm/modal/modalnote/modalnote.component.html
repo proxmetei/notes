@@ -1,0 +1,17 @@
+<div class="form-add-section"> 
+<form  class="myform" [formGroup]="myForm" (ngSubmit)=submitNote()>
+    <div>
+        <label>Заголовок</label>
+        <input name="title" formControlName="title" required>
+    </div>
+    <div>
+        <label>Текст</label>
+        <input name="text" formControlName="text" required>
+    </div>
+    <div>
+        <label>date</label>
+        <input name="dateModal" formControlName="date" required>
+    </div>
+    <button name="submitNote" [disabled]="myForm.invalid">Добавить</button>
+    </form>
+    </div>

@@ -1,0 +1,47 @@
+@import '../colors.scss';
+:host {
+    display: flex;
+    flex-grow: 1;
+    height: calc(100% - 40px);
+}
+.buttonp{
+    width: 300px; 
+    min-width: 300px;
+
+    border:1px solid $borderColor;
+    
+    .icon__plus{
+    
+        font: {
+            color: $iconPlusColor;
+            size: 30pt;
+            weight: normal;
+        }
+    }
+}
+.form-add-section{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    height: 100px;
+    width: 320px;
+    border: 1px solid $borderColor;
+    padding: 40px;
+   
+    background-color: $clearColor;
+   
+}
+
+.example-list {
+    display: flex;
+    flex-grow: 1;
+    height: 100%;
+  }
+  .disp{
+    display: flex;
+    flex-grow: 1;
+    height: 100%
+  }

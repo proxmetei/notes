@@ -15,8 +15,12 @@ exports.config = {
   capabilities: {
     browserName: 'chrome'
   },
+  suites:{
+   test: './src/test/*e2e-spec.ts'
+  },
   directConnect: true,
   baseUrl: 'http://localhost:4200/',
+  SELENIUM_PROMISE_MANAGER: false,
   framework: 'jasmine',
   jasmineNodeOpts: {
     showColors: true,

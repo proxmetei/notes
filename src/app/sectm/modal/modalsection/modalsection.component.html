@@ -1,0 +1,9 @@
+<div class="form-add-section"> 
+    <form  class="myform" [formGroup]="myForm" (ngSubmit)=submitSection()>
+        <div>
+            <label name="modalSectionText">Название</label>
+            <input id="addSectionInput" name="title" formControlName="title" required>
+        </div>
+        <button id="addSectionSubmit" [disabled]="myForm.invalid">Добавить</button>
+        </form>
+        </div>

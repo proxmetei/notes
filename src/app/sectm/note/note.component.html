@@ -1,0 +1,15 @@
+<li class="notes__item">
+    <h3 class="note__title">{{name}}</h3>
+    <p class="note__content">{{noteText}}</p>
+    <div class="notes__bottom">
+        <p id="noteDate" class="note__date">{{date | dateformat}}</p>
+        <div class="note__nav">
+            <button class="btn note__edit" type="button" aria-label="редактировать" (click)="openfornote()">
+                <fa-icon class="icon icon__edit" [icon]="iconEdit" ></fa-icon>
+            </button>
+            <button class="btn note__delete" type="button" aria-label="удалить" (click)="remove()">
+                <fa-icon class="icon icon__trash" [icon]="iconTrash " ></fa-icon>
+            </button>
+        </div>
+    </div>
+</li>

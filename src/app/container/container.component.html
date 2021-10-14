@@ -1,0 +1,10 @@
+<div
+cdkDropList class="example-list"  (cdkDropListDropped)="drop($event)">
+<div cdkDropListGroup class="disp">
+    <app-section class='.cdk-drag-disabled' *ngFor="let section of sections; let i=index"[sectionId]="section.id" id={{section.id}} [sec]="sec" (onRemoveSection)="removeSection(i)" (Drag)="letDrag(i)" (EndDrag)="stopDrag(i)" (dropNote)="dropNote($event)" [addeddNote]="addedNote" [cdkDragDisabled]="caDrag[i]" cdkDragLockAxis="x" cdkDrag></app-section>
+</div>
+</div>
+<button  class = "buttonp" name="addSectionButton" (click)="addSection()">
+    <fa-icon  class="icon icon__plus" [icon]="iconPlus" ></fa-icon>
+</button>
+<ng-template #modalForSection></ng-template>

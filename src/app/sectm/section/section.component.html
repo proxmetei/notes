@@ -1,0 +1,61 @@
+<div class="section__header" [style.background]="color">
+    <button class="btn section__property" type="button" id={{idInputs.proper}} aria-label="" cdkDragBoundary="sect">
+        <fa-icon class="icon icon__property" [icon]="iconProperty"></fa-icon>
+    </button>
+    <h2 name="sectionTitle" class="section__title">{{currSection.title}}</h2>
+    <button name="settingButton" class="btn section__setting" id="setting" type="button" aria-label="Настройки"
+        (click)="open()">
+
+        <fa-icon class="icon icon__setting" [icon]="iconCogs"></fa-icon>
+    </button>
+
+    <div name="hiddenMenu" id={{this.idInputs.menu}} class=" hidden_menu disappear">
+
+        <button (click)="renameSection()">{{'rename'|translate}}</button><br>
+        <button (click)="removeSection()">{{'delete'|translate}}</button><br>
+        <button [(colorPicker)]="color" [cpPosition]="'bottom'" [cpOKButton]="true">{{'changeColor'|translate}}</button>
+        <br>
+        {{'sort'|translate}}<br>
+
+        <div name="sort-old" class="radio">
+            <label class="custom-radio">
+                <input id={{idInputs.sortOld}} type="radio" name="date" value="old" checked>
+                <span>{{'old'|translate}}</span>
+            </label>
+        </div>
+        <div name="sort-new" class="radio">
+            <label class="custom-radio">
+                <input id={{idInputs.sortNew}} type="radio" name="date" value="new">
+                <span>{{'new'|translate}}</span></label>
+        </div>
+        {{'filter'|translate}}
+        <div name="date-even" class="checkbox">
+            <input id={{idInputs.filterEven}} class="custom-checkbox" type="checkbox">
+            <label for={{idInputs.filterEven}}>{{'even'|translate}}</label>
+        </div>
+        <div class="checkbox" name="date-uneven">
+            <input id={{idInputs.filterUneven}} class="custom-checkbox" type="checkbox">
+            <label for={{idInputs.filterUneven}}> {{'uneven'|translate}}</label>
+        </div>
+
+    </div>
+</div>
+
+<div class="notes ">
+
+    <ul class="notes__list">
+        <div cdkDropList id={{this.sectionId}} [cdkDropListData]="this.notes" class="example-list"
+            (cdkDropListDropped)="drop($event)">
+            <div class="free-space" *ngIf="this.currSection.arrayOfNotes.length==0">
+            </div>
+            <app-note  id={{sectionId}} *ngFor="let n of notes" [dates]="n.date" [note]="n" (noteDelete)="removeNote(n)"
+                (changeNote)="changeNote(n)" cdkDrag></app-note>
+        </div>
+    </ul>
+    <button name="addNote" (click)="addNote()" class="add-note" type="button" aria-label="Добавить новую заметку">
+        <fa-icon class="icon icon__plus" [icon]="iconPlus"></fa-icon>
+    </button>
+</div>
+
+<ng-template #modalForNote></ng-template>
+<ng-template #modalForSection></ng-template>

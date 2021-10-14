@@ -1,0 +1,14 @@
+{
+    "title": "Notes",
+    "filter": "filter",
+    "sort": "sort",
+    "even": "even",
+    "uneven": "uneven",
+    "old": "old before",
+    "new": "new before",
+    "changeColor": "change color",
+    "rename": "rename",
+    "delete": "delete",
+    "en": "English",
+    "ru": "Russian"
+}

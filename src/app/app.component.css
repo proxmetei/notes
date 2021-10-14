@@ -1,0 +1,45 @@
+/* :host{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+} */
+.send
+{
+    background-color: blue;
+    color: white;
+    width: 150px;
+    height: 60px;
+    position: absolute;
+    right: 30px;
+}
+.sub{
+    background-color: lightskyblue;
+    width: 90px;
+    height: 30px;
+}
+.disp
+{
+    display: flex;
+}
+h1{
+    color: blue;
+    font-size: 40px;
+}
+input
+{
+    margin: 5px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.border{
+    height: 150px;
+    width: 350px;
+    border: 1px solid blue;
+    margin: 10px;
+}
+.borderh{
+    width: 430px;
+    border: 1px solid blue;
+    margin: 10px;
+}
